@@ -1,0 +1,25 @@
+{
+  "name": "projeto-cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raphaeldevweb/curriculo.git"
+  },
+  "keywords": [
+    "cv"
+  ],
+  "author": "Raphael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raphaeldevweb/curriculo/issues"
+  },
+  "homepage": "https://github.com/Raphaeldevweb/curriculo#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

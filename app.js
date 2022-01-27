@@ -1,12 +1,15 @@
 const express = require("express");
-// importar express
+const path = require("path");
 const port = 3000;
-// const para a porta que será usada para acessar o servidor
 const app = express();
 //aplicação express criada para podermos utilizar os comandos :)
 
-app.get("/", (req, res, next) => {
-  res.send({
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+// setup view engine
+app.get("/", function (req, res, next) {
+  res.render("index", {
     title: "Meu primeiro servidor Express",
     version: "0.0.0",
   });

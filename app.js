@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 // setup view engine
 app.get("/", function (req, res, next) {
   res.render("index", {
-    title: "Meu primeiro servidor Express",
+    title: "Meu primeiro servidor Express :)",
     version: "0.0.0",
   });
 });

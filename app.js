@@ -59,3 +59,5 @@ app.listen(port, (err) => {
   console.log(`Server is listening on ${port}`);
 });
 //servidor irá escutar a porta 3000 e damos um console para confirmar
+
+app.use(express.static(path.join(__dirname, "public")));

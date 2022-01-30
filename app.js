@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const port = 3000;
 const app = express();
+const CurriculoController = require("./controllers/curriculo-controller");
 //aplicação express criada para podermos utilizar os comandos :)
 
 app.set("views", path.join(__dirname, "views"));

@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const path = require("path");
 const port = 3000;
 const app = express();
@@ -9,7 +10,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // setup view engine
-app.get("/curriculo", (req, res, next) => {
+router.get("/curriculo", (req, res, next) => {
   const curriculoData = CurriculoController.getData();
   res.render("curriculo", curriculoData);
 });
@@ -44,10 +45,10 @@ app.get("/curriculo", (req, res, next) => {
   });
 });
 
-app.get("/curriculo", (req, res, next) => {
+router.get("/curriculo", (req, res, next) => {
   res.render("curriculo");
 });
-app.get("/", function (req, res, next) {
+router.get("/", function (req, res, next) {
   res.render("index", {
     title: "Meu primeiro servidor Express =)",
     version: "0.0.0",
@@ -59,3 +60,5 @@ app.listen(port, (err) => {
   console.log(`Server is listening on ${port}`);
 });
 //servidor irá escutar a porta 3000 e damos um console para confirmar
+
+module.exports = router;
